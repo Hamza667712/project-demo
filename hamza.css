@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color:white;
+}
+.heading{
+    color: rgb(14, 5, 5);
+    text-align: center;
+    margin-bottom: 100px;
+}
+.main{
+    display: flex;
+    margin-bottom: 100px;
+}
+.example{
+    display: flex;
+    margin-bottom: 100px;
+}
+.step1{
+ 
+   font-size: 18px;
+   margin-left: 10px;
+}
+
+.step2{
+ 
+    font-size: 18px;
+    margin-left: 10px;
+ }
+ .step3{
+ 
+    font-size: 18px;
+    margin-left: 10px;
+ }
+ .step4{
+ 
+    font-size: 18px;
+    margin-left: 10px;
+ }
+ .step5{
+ 
+    font-size: 18px;
+    margin-left: 10px;
+ }
+ .step6{
+ 
+    font-size: 18px;
+    margin-left: 10px;
+ }

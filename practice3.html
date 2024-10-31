@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="practice3.css">
+</head>
+<body>
+    
+<style>
+
+
+</style>
+
+
+ 
+        <div class="chat-container">
+            <h3 class="paragraph">You Can Ask Your Questions</h3>
+            <div class="chat-box" id="chat-box"></div>
+            <input type="text"class="type" id="user-input" placeholder="Type a message...">
+            <button id="send-btn" class="but">Send</button>
+        </div>
+        <script src="script.js"></script>
+ 
+    
+<script>
+
+document.getElementById('send-btn').addEventListener('click', function() {
+    const userInput = document.getElementById('user-input').value;
+    if (userInput.trim() === '') return;
+
+    const chatBox = document.getElementById('chat-box');
+    chatBox.innerHTML += `<div>User: ${userInput}</div>`;
+
+    // Simple response logic
+    let botResponse = 'Sorry, I did not understand that.';
+    if (userInput.toLowerCase() === 'hi') {
+        botResponse = 'Hello! How can I help you?';
+    } else if (userInput.toLowerCase() === 'how are you') {
+        botResponse = 'I am just a bot, but thanks for asking!';
+    }
+
+    else if (userInput.toLowerCase() === 'ok by') {
+        botResponse = 'ok dear';
+    }
+
+    else if (userInput.toLowerCase() === 'have you refund policy') {
+        botResponse = 'Yes, If you are not satisfied then we will return your payement';
+    }
+
+    else if (userInput.toLowerCase() === 'you are good') {
+        botResponse = 'Thank You So MUch';
+    }
+
+    else if (userInput.toLowerCase() === 'thanku so much') {
+        botResponse = 'My Pleasure';
+    }
+
+    else if (userInput.toLowerCase() === 'can we purchase more then one product') {
+        botResponse = 'Yes, Why not';
+    }
+
+    else if (userInput.toLowerCase() === 'hi, i am hamza') {
+        botResponse = 'oh hooo dear Most welcome';
+    }
+
+
+    chatBox.innerHTML += `<div>Bot: ${botResponse}</div>`;
+    document.getElementById('user-input').value = '';
+    chatBox.scrollTop = chatBox.scrollHeight; // Scroll to bottom
+});
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

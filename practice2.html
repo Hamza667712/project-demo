@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<style>
+
+ /* Basic styling for the form */
+ body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #f0f0f0;
+            }
+
+            #signup {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                width: 300px;
+            }
+
+            h1 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 8px;
+            }
+
+            input {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+
+            }
+
+            button {
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 4px;
+                background-color:green;
+                color: #fff;
+                font-size: 16px;
+                cursor: pointer;
+                margin-left: 5px;
+            }
+
+            button:hover {
+                background-color:green;
+            }
+
+            .error {
+                color: red;
+                font-size: 14px;
+            }
+
+
+    
+</style>
+
+
+
+    <div class="Sign Up">
+        <form id="signup">
+            <h1>Sign Up</h1>
+            <label for="phonenumber" aria-placeholder="phone Number">Phone Number*</label><br>
+            <input type="" name="name" id="number" required><br>
+
+            <label for="code" placeholder="varification code">SMS Varification code</label><br>
+            <input type="text" name="father" id="code" required><br>
+
+            <label for="email" aria-placeholder="write email here">Email:</label><br>
+            <input type="text" name="email" id="email" required><br>
+
+            <label for="password" aria-placeholder="write password">Password</label><br>
+            <input type="password" name="password" id="password" required><br>
+
+            <button type="button" onclick="validatesignup()">Sign Up</button>
+        </form>
+    </div>
+
+<script>
+
+function validatesignup() {
+            var number = document.getElementById("number").value;
+            var code = document.getElementById("code").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            var validnumber = "+923448729500";
+            var validcode = "123456";
+            var validemail = "hamzabashir@gmail.com";
+            var validpassword = "1234";
+
+            if (number == validnumber && code == validcode && email == validemail && password == validpassword) {
+                alert("Congratulations");
+            }
+            else (number !=  validnumber && code !=  validcode && email != validemail && password != validpassword)
+            alert("Try Again");
+        }
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
